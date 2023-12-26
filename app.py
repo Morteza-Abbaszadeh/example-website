@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hello_world():
     JOBS = load_jobs_from_db()
     return render_template( 'home.html' , jobs = JOBS)
-@app.route('/jobs')
+@app.route('/api/jobs')
 def list_jobs():
     JOBS = load_jobs_from_db()
     return jsonify(JOBS)
