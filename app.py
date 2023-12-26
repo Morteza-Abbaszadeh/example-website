@@ -20,7 +20,10 @@ def show_jobs(id):
     for job in JOBS:
         if job['id'] == int(id):
             select_job = job
-    return select_job
+    if select_job == None:
+        return "Not Found" , 404
+    else :
+        return render_template('jobpage.html' ,job= select_job)
 
 if __name__ == "__main__":
     app.run(debug = True)
