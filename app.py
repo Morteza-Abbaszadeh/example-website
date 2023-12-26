@@ -13,7 +13,14 @@ def list_jobs():
     JOBS = load_jobs_from_db()
     return jsonify(JOBS)
 
-
+@app.route('/jobs/<id>')
+def show_jobs(id):
+    JOBS = load_jobs_from_db()
+    select_job = None
+    for job in JOBS:
+        if job['id'] == int(id):
+            select_job = job
+    return select_job
 
 if __name__ == "__main__":
     app.run(debug = True)
