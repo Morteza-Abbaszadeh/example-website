@@ -20,8 +20,12 @@
          
         <div class="container">
         <h2 class="text-center"> Open positions </h2>
-            <p class="lead"> TODO - show the jobs here </p>
+            <p class="lead"> {% for job in jobs %} 
+                               {% include 'jobitem.html' %}
+                            {% endfor %} </p>
         </div>
+        
+        
         <div class="text-center">
             <button class="btn btn-primary btn-lg"> Contact us </button>
         
