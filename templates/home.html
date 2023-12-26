@@ -9,8 +9,8 @@
         
     </head>
     <body>
+        {%include 'nav.html' %}
         <div class="container">
-            <h1 class="text-center"> first website </h1>  
 
             <img id="logo" src="static/title_pic_.jpg" class="img-fluid">
             <h2 class="text-center"> about website </h2>
@@ -25,11 +25,12 @@
                             {% endfor %} </p>
         </div>
         
-        
         <div class="text-center">
             <button class="btn btn-primary btn-lg"> Contact us </button>
         
-            <p > Copyright 2022, Abbaszadeh</p>
         </div>
+        {%include 'footer.html' %}
+
+
     </body>
 </html> 
